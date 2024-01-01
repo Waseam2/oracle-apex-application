@@ -1,0 +1,218 @@
+prompt --application/pages/page_00034
+begin
+--   Manifest
+--     PAGE: 00034
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0'
+,p_default_workspace_id=>2700425181679773
+,p_default_application_id=>100
+,p_default_id_offset=>3200132127756896
+,p_default_owner=>'PHARMACY'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>34
+,p_user_interface_id=>wwv_flow_imp.id(6900146603923203)
+,p_name=>'show complains'
+,p_alias=>'SHOW-COMPLAINS'
+,p_step_title=>'show complains'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(6733501178922514)
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'22'
+,p_last_updated_by=>'WASEAM'
+,p_last_upd_yyyymmddhh24miss=>'20231227010545'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(13502780942891527)
+,p_plug_name=>'New'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(6742125961922563)
+,p_plug_display_sequence=>10
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_source_type=>'NATIVE_FACETED_SEARCH'
+,p_filtered_region_id=>wwv_flow_imp.id(16002178969668968)
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_06=>'Y'
+,p_attribute_09=>'N'
+,p_attribute_12=>'10000'
+,p_attribute_13=>'Y'
+,p_attribute_15=>'10'
+);
+wwv_flow_imp_page.create_report_region(
+ p_id=>wwv_flow_imp.id(16002178969668968)
+,p_name=>'show complains'
+,p_template=>wwv_flow_imp.id(6802440761922783)
+,p_display_sequence=>30
+,p_region_template_options=>'#DEFAULT#:t-Region--noPadding:t-Region--hideHeader:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#:t-Report--stretch:t-Report--staticRowColors:t-Report--rowHighlight:t-Report--inline:t-Report--hideNoPagination'
+,p_source_type=>'NATIVE_SQL_REPORT'
+,p_query_type=>'TABLE'
+,p_query_table=>'PH_COMPLAIN'
+,p_include_rowid_column=>false
+,p_ajax_enabled=>'Y'
+,p_lazy_loading=>false
+,p_query_row_template=>wwv_flow_imp.id(6840373677922897)
+,p_query_num_rows=>50
+,p_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_query_no_data_found=>'no data found'
+,p_query_num_rows_type=>'NEXT_PREVIOUS_LINKS'
+,p_query_row_count_max=>500
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+,p_prn_output=>'N'
+,p_prn_format=>'PDF'
+,p_sort_null=>'L'
+,p_plug_query_strip_html=>'N'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(16002552890668995)
+,p_query_column_id=>1
+,p_column_alias=>'COMPLAIN_ID'
+,p_column_display_sequence=>20
+,p_hidden_column=>'Y'
+,p_derived_column=>'N'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(16002946466669003)
+,p_query_column_id=>2
+,p_column_alias=>'USER_NAME'
+,p_column_display_sequence=>40
+,p_column_heading=>'User Name'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(16003308785669003)
+,p_query_column_id=>3
+,p_column_alias=>'CUSTOMER_NAME'
+,p_column_display_sequence=>50
+,p_column_heading=>'Customer Name'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(16003766752669003)
+,p_query_column_id=>4
+,p_column_alias=>'CUSTOMER_PHONE'
+,p_column_display_sequence=>60
+,p_column_heading=>'Customer Phone'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(16004142555669003)
+,p_query_column_id=>5
+,p_column_alias=>'COMPLAIN_TEXT'
+,p_column_display_sequence=>70
+,p_column_heading=>'Complain Text'
+,p_use_as_row_header=>'N'
+,p_column_alignment=>'CENTER'
+,p_disable_sort_column=>'N'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(13502039108891520)
+,p_query_column_id=>6
+,p_column_alias=>'DERIVED$01'
+,p_column_display_sequence=>30
+,p_column_heading=>'delete'
+,p_use_as_row_header=>'N'
+,p_column_link=>'#'
+,p_column_linktext=>'<span aria-hidden="true" class="t-Icon fa fa-trash-o"></span>'
+,p_column_link_attr=>'title="#COMPLAIN_ID#" class=" delete t-Button t-Button--noLabel t-Button--icon t-Button--danger t-Button--simple"'
+,p_column_alignment=>'CENTER'
+,p_derived_column=>'Y'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13502338308891523)
+,p_name=>'P34_COMPLAIN_ID'
+,p_item_sequence=>40
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'N'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13502853568891528)
+,p_name=>'P34_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(13502780942891527)
+,p_prompt=>'Search'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_SEARCH'
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'ROW'
+,p_attribute_02=>'FACET'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13502168514891521)
+,p_name=>'remove Complain'
+,p_event_sequence=>10
+,p_triggering_element_type=>'JQUERY_SELECTOR'
+,p_triggering_element=>'a.delete'
+,p_bind_type=>'live'
+,p_bind_event_type=>'click'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13502208520891522)
+,p_event_id=>wwv_flow_imp.id(13502168514891521)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_CONFIRM'
+,p_attribute_01=>'are you sure you want delete this complain ?'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13502448253891524)
+,p_event_id=>wwv_flow_imp.id(13502168514891521)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_SET_VALUE'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P34_COMPLAIN_ID'
+,p_attribute_01=>'JAVASCRIPT_EXPRESSION'
+,p_attribute_05=>'this.triggeringElement.title'
+,p_attribute_09=>'N'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13502691086891526)
+,p_event_id=>wwv_flow_imp.id(13502168514891521)
+,p_event_result=>'TRUE'
+,p_action_sequence=>30
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'',
+'',
+'delete from ph_complain where complain_id = :P34_COMPLAIN_ID ;'))
+,p_attribute_02=>'P34_COMPLAIN_ID'
+,p_attribute_05=>'PLSQL'
+,p_wait_for_result=>'Y'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13502532542891525)
+,p_event_id=>wwv_flow_imp.id(13502168514891521)
+,p_event_result=>'TRUE'
+,p_action_sequence=>40
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(16002178969668968)
+);
+wwv_flow_imp.component_end;
+end;
+/

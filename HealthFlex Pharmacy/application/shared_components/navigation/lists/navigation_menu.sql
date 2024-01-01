@@ -1,0 +1,258 @@
+prompt --application/shared_components/navigation/lists/navigation_menu
+begin
+--   Manifest
+--     LIST: Navigation Menu
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0'
+,p_default_workspace_id=>2700425181679773
+,p_default_application_id=>100
+,p_default_id_offset=>3200132127756896
+,p_default_owner=>'PHARMACY'
+);
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(6705928700922346)
+,p_name=>'Navigation Menu'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(6907899512923469)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Home'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:'
+,p_list_item_icon=>'fa-home'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(7000915233895049)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Add'
+,p_list_item_icon=>'fa-plus-circle-o'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(10306969364912530)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Unit menu'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-folder-plus'
+,p_parent_list_item_id=>wwv_flow_imp.id(7000915233895049)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'8,9'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(11610728480472713)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>'medcine menu'
+,p_list_item_link_target=>'f?p=&APP_ID.:12:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-medication-pills'
+,p_parent_list_item_id=>wwv_flow_imp.id(7000915233895049)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'12,13'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(15801454253615925)
+,p_list_item_display_sequence=>610
+,p_list_item_link_text=>'Add Complain'
+,p_list_item_link_target=>'f?p=&APP_ID.:31:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-forms'
+,p_parent_list_item_id=>wwv_flow_imp.id(7000915233895049)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'31'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12300753318881238)
+,p_list_item_display_sequence=>70
+,p_list_item_link_text=>'orders'
+,p_list_item_icon=>'fa-cart-plus'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12301188083922652)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Sell Order'
+,p_list_item_link_target=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-cart-arrow-up'
+,p_parent_list_item_id=>wwv_flow_imp.id(12300753318881238)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'3'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12302689855927483)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Buy Order'
+,p_list_item_link_target=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-cart-arrow-down'
+,p_parent_list_item_id=>wwv_flow_imp.id(12300753318881238)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'4'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(29105938138879314)
+,p_list_item_display_sequence=>570
+,p_list_item_link_text=>'Returned Order'
+,p_list_item_link_target=>'f?p=&APP_ID.:23:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-cart-times'
+,p_parent_list_item_id=>wwv_flow_imp.id(12300753318881238)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'23'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17203660142764299)
+,p_list_item_display_sequence=>120
+,p_list_item_link_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'Manage Application',
+''))
+,p_list_item_icon=>'fa-gear'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(7310362589037555)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'User Menu'
+,p_list_item_link_target=>'f?p=&APP_ID.:5:&SESSION.::&DEBUG.:5:::'
+,p_list_item_icon=>'fa-user-plus'
+,p_parent_list_item_id=>wwv_flow_imp.id(17203660142764299)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'5,6'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(10600903489239797)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Provider Menu'
+,p_list_item_link_target=>'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-user-man'
+,p_parent_list_item_id=>wwv_flow_imp.id(17203660142764299)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'10'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(17204116048777519)
+,p_list_item_display_sequence=>130
+,p_list_item_link_text=>'Setting'
+,p_list_item_link_target=>'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-gears'
+,p_parent_list_item_id=>wwv_flow_imp.id(17203660142764299)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'15'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(16001183841668942)
+,p_list_item_display_sequence=>620
+,p_list_item_link_text=>'show complains [&COMPLAIN_NUM.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:34:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-table'
+,p_list_item_icon_attributes=>'color:red'
+,p_parent_list_item_id=>wwv_flow_imp.id(17203660142764299)
+,p_translate_list_text_y_n=>'Y'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'34'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_display_sequence=>140
+,p_list_item_link_text=>'financial management'
+,p_list_item_icon=>'fa-cart-arrow-down'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(20100674483623333)
+,p_list_item_display_sequence=>150
+,p_list_item_link_text=>'Invoice'
+,p_list_item_link_target=>'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-clipboard-list'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'16'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(23801238724841466)
+,p_list_item_display_sequence=>510
+,p_list_item_link_text=>'Income'
+,p_list_item_link_target=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-dollar'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'20'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(27908726755113897)
+,p_list_item_display_sequence=>560
+,p_list_item_link_text=>'Outgoings'
+,p_list_item_link_target=>'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-minus-circle'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'21'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(38127358923230358)
+,p_list_item_display_sequence=>580
+,p_list_item_link_text=>'Returns'
+,p_list_item_link_target=>'f?p=&APP_ID.:19:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-rotate-left'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'19'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(38418634211856597)
+,p_list_item_display_sequence=>590
+,p_list_item_link_text=>'Annual Financial Report'
+,p_list_item_link_target=>'f?p=&APP_ID.:29:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-money'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'29'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(13400342468780657)
+,p_list_item_display_sequence=>600
+,p_list_item_link_text=>'Statistics'
+,p_list_item_link_target=>'f?p=&APP_ID.:30:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-tachometer'
+,p_parent_list_item_id=>wwv_flow_imp.id(20000772830551221)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'30'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(16500753287555155)
+,p_list_item_display_sequence=>500
+,p_list_item_link_text=>'test'
+,p_list_item_link_target=>'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-file-o'
+,p_required_patch=>wwv_flow_imp.id(6704822410922303)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'14'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(24215048947677600)
+,p_list_item_display_sequence=>520
+,p_list_item_link_text=>'Medecine Condition tracker '
+,p_list_item_icon=>'fa-medication'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(24215822565695041)
+,p_list_item_display_sequence=>530
+,p_list_item_link_text=>'shortcoming medecine [&MIN_QUANTITY_NUM.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:22:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-medication-pills'
+,p_parent_list_item_id=>wwv_flow_imp.id(24215048947677600)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'22'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(24219665321728436)
+,p_list_item_display_sequence=>540
+,p_list_item_link_text=>'expiredDate Medecine  [&EX_DATE_NUM.]'
+,p_list_item_link_target=>'f?p=&APP_ID.:26:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-file-prescription'
+,p_parent_list_item_id=>wwv_flow_imp.id(24215048947677600)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'26'
+);
+wwv_flow_imp.component_end;
+end;
+/
